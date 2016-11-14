@@ -45,3 +45,7 @@ venv/
 images/
 *.geojson
 
+# Node Modules #
+################
+node_modules/
+
