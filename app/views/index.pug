@@ -1,5 +1,10 @@
-extends layout
+include header
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.container
+    div.welcome-search
+      h1= title
+      p.lead search your city
+      input.typeahead
+
+include footer
