@@ -30,7 +30,7 @@ body {
 .typeahead,
 .tt-query,
 .tt-hint {
-  width: 396px;
+  max-width: 330px;
   height: 30px;
   padding: 8px 12px;
   font-size: 24px;
@@ -47,7 +47,7 @@ body {
 }
 
 .typeahead:focus {
-  border: 2px solid #0097cf;
+  border: 2px solid #999;
 }
 
 .tt-query {
