@@ -1,0 +1,39 @@
+include header
+
+block content
+  div.container
+    .city= data.current_observation.display_location.full
+    .weather= data.current_observation.weather
+    .temperature= data.current_observation.temp_f
+    .humidity= data.current_observation.relative_humidity
+    .windf= data.current_observation.wind_mph
+    .windt= data.current_observation.wind_gust_mph
+    .wind-dir= data.current_observation.wind_dir
+    .feels-like= data.current_observation.feelslike_f
+    .icon
+      img(src="http://icons.wxug.com/i/c/j/" + data.current_observation.icon + ".gif") 
+    .forecast= data.forecast.txt_forecast.forecastday[0].title
+    .forecast= data.forecast.txt_forecast.forecastday[0].icon
+    .forecast= data.forecast.txt_forecast.forecastday[0].fcttext
+    .forecast= data.forecast.txt_forecast.forecastday[1].title
+    .icon
+      img(src="http://icons.wxug.com/i/c/j/" + data.forecast.txt_forecast.forecastday[1].icon + ".gif")
+    .forecast= data.forecast.txt_forecast.forecastday[1].fcttext
+    .forecast= data.forecast.simpleforecast.forecastday[1].date.weekday
+    .forecast= data.forecast.simpleforecast.forecastday[1].high.fahrenheit
+    .forecast= data.forecast.simpleforecast.forecastday[1].low.fahrenheit
+    .icon
+      img(src="http://icons.wxug.com/i/c/j/" + data.forecast.simpleforecast.forecastday[1].icon + ".gif")
+    .forecast= data.forecast.simpleforecast.forecastday[2].date.weekday
+    .forecast= data.forecast.simpleforecast.forecastday[2].high.fahrenheit
+    .forecast= data.forecast.simpleforecast.forecastday[2].low.fahrenheit
+    .icon
+      img(src="http://icons.wxug.com/i/c/j/" + data.forecast.simpleforecast.forecastday[2].icon + ".gif")
+    .forecast= data.forecast.simpleforecast.forecastday[3].date.weekday
+    .forecast= data.forecast.simpleforecast.forecastday[3].high.fahrenheit
+    .forecast= data.forecast.simpleforecast.forecastday[3].low.fahrenheit
+    .icon
+      img(src="http://icons.wxug.com/i/c/j/" + data.forecast.simpleforecast.forecastday[3].icon + ".gif")
+
+
+include footer
