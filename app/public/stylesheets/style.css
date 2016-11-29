@@ -1,10 +1,71 @@
-body {
+/*body {
   padding-top: 50px;
-}
+}*/
+
+/* search page layout */
+
 .welcome-search {
   padding: 40px 15px;
   text-align: center;
 }
+
+/* weather page layout */
+.forecast .row {
+  padding: 10px 0;
+}
+.city {
+  font-size: 14px;
+  text-align: center;
+}
+
+.conditions {
+  font-size: 72px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.conditions i {
+  position: relative;
+  top: 10px;
+}
+
+.weather {
+  font-size: 24px;
+  text-align: center;
+}
+
+.feels-like {
+  font-size: 20px;
+  text-align: center;  
+}
+
+.subconditions {
+  font-size: 20px;
+}
+
+.subconditions i {
+  font-size: 36px;
+}
+
+.short-term {
+  font-size: 18px;
+}
+
+.short-term i {
+  font-size: 36px;
+  text-align: right;
+}
+
+.long-term {
+  font-size: 18px;
+  text-align: center;
+}
+
+.long-term i {
+  font-size: 36px;
+  text-align: right;
+}
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -33,9 +94,9 @@ body {
   max-width: 330px;
   height: 30px;
   padding: 8px 12px;
-  font-size: 24px;
-  line-height: 30px;
-  border: 2px solid #ccc;
+  font-size: 20px;
+  line-height: 24px;
+  border: 1px solid #ccc;
   -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
           border-radius: 8px;
@@ -47,7 +108,7 @@ body {
 }
 
 .typeahead:focus {
-  border: 2px solid #999;
+  border: 1px solid #999;
 }
 
 .tt-query {
@@ -61,7 +122,7 @@ body {
 }
 
 .tt-menu {
-  width: 422px;
+  max-width: 330px;
   margin: 12px 0;
   padding: 8px 0;
   background-color: #fff;
@@ -77,8 +138,8 @@ body {
 
 .tt-suggestion {
   padding: 3px 20px;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .tt-suggestion:hover {
@@ -97,3 +158,114 @@ body {
   margin: 0;
 }
 
+/* icon mapping */
+.wi-wu-chanceflurries:before {
+  content: "\f064";
+}
+.wi-wu-chancerain:before {
+  content: "\f019";
+}
+.wi-wu-chancesleat:before {
+  content: "\f0b5";
+}
+.wi-wu-chancesnow:before {
+  content: "\f01b";
+}
+.wi-wu-chancetstorms:before {
+  content: "\f01e";
+}
+.wi-wu-clear:before {
+  content: "\f00d";
+}
+.wi-wu-cloudy:before {
+  content: "\f002";
+}
+.wi-wu-flurries:before {
+  content: "\f064";
+}
+.wi-wu-hazy:before {
+  content: "\f0b6";
+}
+.wi-wu-mostlycloudy:before {
+  content: "\f002";
+}
+.wi-wu-mostlysunny:before {
+  content: "\f00d";
+}
+.wi-wu-partlycloudy:before {
+  content: "\f002";
+}
+.wi-wu-partlysunny:before {
+  content: "\f00d";
+}
+.wi-wu-rain:before {
+  content: "\f01a";
+}
+.wi-wu-sleat:before {
+  content: "\f0b5";
+}
+.wi-wu-snow:before {
+  content: "\f01b";
+}
+.wi-wu-sunny:before {
+  content: "\f00d";
+}
+.wi-wu-tstorms:before {
+  content: "\f01e";
+}
+.wi-wu-unknown:before {
+  content: "\f00d";
+}
+
+/* wu-nt mappings from https://github.com/erikflowers/weather-icons/issues/156 */
+/* --- neutral night icons for WU's "chance" --- */
+.wi-wu-nt_chanceflurries:before {
+  content: "\f064";
+}
+.wi-wu-nt_chancerain:before {
+  content: "\f019";
+}
+.wi-wu-nt_chancesleet:before {
+  content: "\f0b5";
+}
+.wi-wu-nt_chancesnow:before {
+  content: "\f01b";
+}
+.wi-wu-nt_chancetstorms:before {
+  content: "\f01e";
+}
+
+/* --- night icons for full moon phase --- */
+.wi-wu-nt_clear:before { /* no night-full moon available, using night-stars */
+  content: "\f077";
+}
+.wi-wu-nt_cloudy:before {
+  content: "\f031";
+}
+.wi-wu-nt_flurries:before {
+  content: "\f038";
+}
+.wi-wu-nt_fog:before { /* no full moon night-fog available, using neutral fog */
+  content: "\f014";
+}
+.wi-wu-nt_hazy:before { /* no full moon night-haze available, using neutral fog */
+  content: "\f014";
+}
+.wi-wu-nt_mostlycloudy:before {
+  content: "\f031";
+}
+.wi-wu-nt_partlycloudy:before {
+  content: "\f083";
+}
+.wi-wu-nt_sleet:before {
+  content: "\f0b3";
+}
+.wi-wu-nt_rain:before {
+  content: "\f036";
+}
+.wi-wu-nt_snow:before {
+  content: "\f038";
+}
+.wi-wu-nt_tstorms:before {
+  content: "\f03b";
+}

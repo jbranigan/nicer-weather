@@ -1,39 +1,55 @@
 include header
 
 block content
-  div.container
-    .city= data.current_observation.display_location.full
-    .weather= data.current_observation.weather
-    .temperature= data.current_observation.temp_f
-    .humidity= data.current_observation.relative_humidity
-    .windf= data.current_observation.wind_mph
-    .windt= data.current_observation.wind_gust_mph
-    .wind-dir= data.current_observation.wind_dir
-    .feels-like= data.current_observation.feelslike_f
-    .icon
-      img(src="http://icons.wxug.com/i/c/j/" + data.current_observation.icon + ".gif") 
-    .forecast= data.forecast.txt_forecast.forecastday[0].title
-    .forecast= data.forecast.txt_forecast.forecastday[0].icon
-    .forecast= data.forecast.txt_forecast.forecastday[0].fcttext
-    .forecast= data.forecast.txt_forecast.forecastday[1].title
-    .icon
-      img(src="http://icons.wxug.com/i/c/j/" + data.forecast.txt_forecast.forecastday[1].icon + ".gif")
-    .forecast= data.forecast.txt_forecast.forecastday[1].fcttext
-    .forecast= data.forecast.simpleforecast.forecastday[1].date.weekday
-    .forecast= data.forecast.simpleforecast.forecastday[1].high.fahrenheit
-    .forecast= data.forecast.simpleforecast.forecastday[1].low.fahrenheit
-    .icon
-      img(src="http://icons.wxug.com/i/c/j/" + data.forecast.simpleforecast.forecastday[1].icon + ".gif")
-    .forecast= data.forecast.simpleforecast.forecastday[2].date.weekday
-    .forecast= data.forecast.simpleforecast.forecastday[2].high.fahrenheit
-    .forecast= data.forecast.simpleforecast.forecastday[2].low.fahrenheit
-    .icon
-      img(src="http://icons.wxug.com/i/c/j/" + data.forecast.simpleforecast.forecastday[2].icon + ".gif")
-    .forecast= data.forecast.simpleforecast.forecastday[3].date.weekday
-    .forecast= data.forecast.simpleforecast.forecastday[3].high.fahrenheit
-    .forecast= data.forecast.simpleforecast.forecastday[3].low.fahrenheit
-    .icon
-      img(src="http://icons.wxug.com/i/c/j/" + data.forecast.simpleforecast.forecastday[3].icon + ".gif")
+  div.container.forecast
+    .row
+      .col-xs-12.city= data.current_observation.display_location.full
+    .row.conditions
+      .col-xs-4.col-xs-offset-2
+        i(class="wi wi-wu-" + data.current_observation.icon)    
+      .col-xs-4.temperature= Math.round(data.current_observation.temp_f, 0) + '°'
+    .row
+      .col-xs-12.weather= data.current_observation.weather
+    .row
+      .col-xs-12.feels-like= '(feels like ' + Math.round(data.current_observation.feelslike_f) + '°)'
+    .row
+      .col-xs-12.subconditions 
+        .row
+          .col-xs-2.col-xs-offset-3 
+            i(class="wi wi-umbrella") 
+          .col-xs-4= data.forecast.simpleforecast.forecastday[0].pop + '%'
+        .row
+          .col-xs-2.col-xs-offset-3
+            i(class="wi wi-wind wi-from-" + data.current_observation.wind_dir.toLowerCase())
+          .col-xs-4= Math.round(data.current_observation.wind_mph) + ' - ' + Math.round(data.current_observation.wind_gust_mph) + ' mph'
+        .row
+          .col-xs-2.col-xs-offset-3 
+            i(class="wi wi-humidity") 
+          .col-xs-4= data.current_observation.relative_humidity
+    .row.short-term
+      .col-xs-2.col-xs-offset-1
+        i(class="wi wi-wu-" + data.forecast.txt_forecast.forecastday[0].icon)
+      .col-xs-9.forecast= data.forecast.txt_forecast.forecastday[0].title + ': ' + data.forecast.txt_forecast.forecastday[0].fcttext
+    .row.short-term
+      .col-xs-2.col-xs-offset-1
+        i(class="wi wi-wu-" + data.forecast.txt_forecast.forecastday[1].icon)
+      .col-xs-9.forecast= data.forecast.txt_forecast.forecastday[1].title + ': ' + data.forecast.txt_forecast.forecastday[1].fcttext
+    .row.long-term
+      .col-xs-2.col-xs-offset-2
+        i(class="wi wi-wu-" + data.forecast.simpleforecast.forecastday[1].icon)
+      .col-xs-6.forecast= data.forecast.simpleforecast.forecastday[1].date.weekday
+        .forecast= data.forecast.simpleforecast.forecastday[1].high.fahrenheit + '° ' + data.forecast.simpleforecast.forecastday[1].low.fahrenheit + '°'
+    .row.long-term
+      .col-xs-2.col-xs-offset-2
+        i(class="wi wi-wu-" + data.forecast.simpleforecast.forecastday[2].icon)
+      .col-xs-6.forecast= data.forecast.simpleforecast.forecastday[2].date.weekday
+        .forecast= data.forecast.simpleforecast.forecastday[2].high.fahrenheit + '° ' + data.forecast.simpleforecast.forecastday[2].low.fahrenheit + '°'
+    .row.long-term
+      .col-xs-2.col-xs-offset-2
+        i(class="wi wi-wu-" + data.forecast.simpleforecast.forecastday[3].icon)
+      .col-xs-6.forecast= data.forecast.simpleforecast.forecastday[3].date.weekday
+        .forecast= data.forecast.simpleforecast.forecastday[3].high.fahrenheit + '° ' + data.forecast.simpleforecast.forecastday[3].low.fahrenheit + '°'
+
 
 
 include footer
