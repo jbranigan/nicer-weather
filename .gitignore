@@ -40,11 +40,6 @@ Thumbs.db
 #####################
 venv/
 
-# Images and Map Data #
-##########
-images/
-*.geojson
-
 # Node Modules #
 ################
 node_modules/
