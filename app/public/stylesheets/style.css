@@ -1,15 +1,29 @@
 /*body {
   padding-top: 50px;
 }*/
+.logo {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.logo img {
+  display: inline-block;
+  width: 120px;
+}
 
 /* search page layout */
 
 .welcome-search {
   padding: 40px 15px;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* weather page layout for mobile */
+.forecast {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .forecast .row {
   padding: 10px 0;
 }

@@ -25,24 +25,24 @@ block content
     .row.short-term
       .col-xs-2.col-xs-offset-1
         i(class="wi wi-wu-" + data.forecast.txt_forecast.forecastday[0].icon)
-      .col-xs-8.forecast= data.forecast.txt_forecast.forecastday[0].title + ': ' + data.forecast.txt_forecast.forecastday[0].fcttext
+      .col-xs-8.stforecast= data.forecast.txt_forecast.forecastday[0].title + ': ' + data.forecast.txt_forecast.forecastday[0].fcttext
     .row.short-term
       .col-xs-2.col-xs-offset-1
         i(class="wi wi-wu-" + data.forecast.txt_forecast.forecastday[1].icon)
-      .col-xs-8.forecast= data.forecast.txt_forecast.forecastday[1].title + ': ' + data.forecast.txt_forecast.forecastday[1].fcttext
+      .col-xs-8.stforecast= data.forecast.txt_forecast.forecastday[1].title + ': ' + data.forecast.txt_forecast.forecastday[1].fcttext
     .row.long-term
       .col-xs-2.col-xs-offset-2.col-sm-1.col-sm-offset-2.col-md-1.col-md-offset-2
         i(class="wi wi-wu-" + data.forecast.simpleforecast.forecastday[1].icon)
       .col-xs-6.col-sm-2.col-md-1.forecast= data.forecast.simpleforecast.forecastday[1].date.weekday
-        .forecast= data.forecast.simpleforecast.forecastday[1].high.fahrenheit + '° ' + data.forecast.simpleforecast.forecastday[1].low.fahrenheit + '°'
+        .ltforecast= data.forecast.simpleforecast.forecastday[1].high.fahrenheit + '° ' + data.forecast.simpleforecast.forecastday[1].low.fahrenheit + '°'
       .col-xs-2.col-xs-offset-2.col-sm-1.col-sm-offset-0.col-md-1.col-md-offset-1
         i(class="wi wi-wu-" + data.forecast.simpleforecast.forecastday[2].icon)
       .col-xs-6.col-sm-2.col-md-1.forecast= data.forecast.simpleforecast.forecastday[2].date.weekday
-        .forecast= data.forecast.simpleforecast.forecastday[2].high.fahrenheit + '° ' + data.forecast.simpleforecast.forecastday[2].low.fahrenheit + '°'
+        .ltforecast= data.forecast.simpleforecast.forecastday[2].high.fahrenheit + '° ' + data.forecast.simpleforecast.forecastday[2].low.fahrenheit + '°'
       .col-xs-2.col-xs-offset-2.col-sm-1.col-sm-offset-0.col-md-1.col-md-offset-1
         i(class="wi wi-wu-" + data.forecast.simpleforecast.forecastday[3].icon)
       .col-xs-6.col-sm-2.col-md-1.forecast= data.forecast.simpleforecast.forecastday[3].date.weekday
-        .forecast= data.forecast.simpleforecast.forecastday[3].high.fahrenheit + '° ' + data.forecast.simpleforecast.forecastday[3].low.fahrenheit + '°'
+        .ltforecast= data.forecast.simpleforecast.forecastday[3].high.fahrenheit + '° ' + data.forecast.simpleforecast.forecastday[3].low.fahrenheit + '°'
 
 
 
