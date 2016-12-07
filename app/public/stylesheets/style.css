@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-/* weather page layout */
+/* weather page layout for mobile */
 .forecast .row {
   padding: 10px 0;
 }
@@ -45,6 +45,8 @@
 
 .subconditions i {
   font-size: 36px;
+  text-align: center;
+  width: 100%;
 }
 
 .short-term {
@@ -54,6 +56,9 @@
 .short-term i {
   font-size: 36px;
   text-align: right;
+  position: relative;
+  top: 10px;
+  width: 100%;
 }
 
 .long-term {
@@ -64,8 +69,80 @@
 .long-term i {
   font-size: 36px;
   text-align: right;
+  position: relative;
+  top: 10px;
+  width: 100%;
 }
 
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 48em) {
+
+  .forecast .row {
+    padding: 20px 0;
+  }
+
+  .city {
+    font-size: 20px;
+  }
+
+  .conditions {
+    font-size: 144px;
+  }
+
+  .weather {
+    font-size: 48px;
+  }
+
+  .feels-like {
+    font-size: 36px;
+  }
+
+  .short-term i {
+    font-size: 56px;
+  }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 62em) {
+  .weather {
+    padding-top: 30px;
+  }
+
+  .conditions {
+    font-size: 120px;
+  }
+
+  .weather {
+    font-size: 36px;
+  }
+
+  .feels-like {
+    font-size: 24px;
+  }
+
+  .long-term {
+    font-size: 14px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 75em) {
+  .conditions {
+    font-size: 144px;
+  }
+
+  .weather {
+    font-size: 48px;
+  }
+
+  .feels-like {
+    font-size: 36px;
+  }
+
+  .long-term {
+    font-size: 20px;
+  }}
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -84,6 +161,17 @@ body {
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #f5f5f5;
+  padding-top: 5px;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.wulogo {
+  display: inline-block;
+  width: 90px;
+  vertical-align: baseline;
 }
 
 /* typeahead.js styles */
