@@ -5,14 +5,14 @@ block content
     .row
       .col-xs-12.city= data.current_observation.display_location.full
       .conditions.col-xs-4.col-xs-offset-2.col-md-2.col-md-offset-2
-        i(class="wi wi-wu-" + data.current_observation.icon)    
+        i(class="wi wi-wu-" + data.current_observation.icon)
       .conditions.col-xs-4.col-md-3.temperature= Math.round(data.current_observation.temp_f, 0) + '°'
       .col-xs-12.col-md-4.weather= data.current_observation.weather
       .col-xs-12.col-md-4.feels-like= '(feels like ' + Math.round(data.current_observation.feelslike_f) + '°)'
     .row
-      .subconditions 
+      .subconditions
           .col-xs-2.col-xs-offset-3.col-sm-1.col-sm-offset-1.col-md-1.col-md-offset-2
-            i(class="wi wi-umbrella") 
+            i(class="wi wi-umbrella")
           .col-xs-6.col-sm-2.col-md-2= data.forecast.simpleforecast.forecastday[0].pop + '%'
           .clearfix.visible-xs-block
           .col-xs-2.col-xs-offset-3.col-sm-1.col-sm-offset-1.col-md-1.col-md-offset-0
@@ -20,7 +20,7 @@ block content
           .col-xs-6.col-sm-2.col-md-2= Math.round(data.current_observation.wind_mph) + ' - ' + Math.round(data.current_observation.wind_gust_mph) + ' mph'
           .clearfix.visible-xs-block
           .col-xs-2.col-xs-offset-3.col-sm-1.col-sm-offset-1.col-md-1.col-md-offset-0
-            i(class="wi wi-humidity") 
+            i(class="wi wi-humidity")
           .col-xs-6.col-sm-2.col-md-2= data.current_observation.relative_humidity
     .row.short-term
       .col-xs-2.col-xs-offset-1
@@ -44,6 +44,8 @@ block content
       .col-xs-6.col-sm-2.col-md-1.forecast= data.forecast.simpleforecast.forecastday[3].date.weekday
         .ltforecast= data.forecast.simpleforecast.forecastday[3].high.fahrenheit + '° ' + data.forecast.simpleforecast.forecastday[3].low.fahrenheit + '°'
 
-
+div#temp-data(data-low= data.forecast.simpleforecast.forecastday[0].low.fahrenheit)&attributes({'data-high': data.forecast.simpleforecast.forecastday[0].high.fahrenheit})
 
 include footer
+
+script(src='../javascripts/setColors.js')
